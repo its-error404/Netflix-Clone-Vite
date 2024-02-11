@@ -1,16 +1,15 @@
 import React from "react";
-import NetflixLogo from "../../../assets/Netflix-logo-red-black-png.png";
+import NetflixLogo from "../../../assets/Netflix-logo-red-black-png-removebg-preview.png";
 import SharedButton from "../../Reusable/Button";
-import { Col, Flex, Row, Space } from "antd";
+import { Flex, Space } from "antd";
+import './navbar.scss'
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
-    <div>
+    <div className="navbar">
     <Flex justify="space-between" align="center">
       <img src={NetflixLogo} alt="Netflix Logo" width={150} height={80} />
-      <Space size={20} direction="horizontal" style={{marginRight: '20px'}}>
+      <Space size={20} direction="horizontal" style={{marginRight: '20px'}} className="navbar-buttons">
         <SharedButton color="red">Sign Up</SharedButton>
         <SharedButton>Sign In</SharedButton>
       </Space>

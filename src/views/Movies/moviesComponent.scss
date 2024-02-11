@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+
+.movies-component {
+    .image-gradient {
+        height: 550px;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), transparent);
+        pointer-events: none;
+    }
+
+    .image-container {
+        height: 550px;
+        width: 100%;
+        z-index: 3;
+        
+
+        img {
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+    .movie-information {
+        position: absolute;
+        top: 40%;
+        z-index: 5;
+        margin-left: 20px;
+        .movie-details {
+            margin-top: 15px;
+
+            .movie-overview {
+                width: 50%;
+            }
+        }
+
+        .play-button {
+            background-color: red;
+            color: white;
+            @include LatoBold;
+            border-radius: 2px;
+        }
+        .watch-later-button {
+            @include LatoBold;
+            border-radius: 2px;
+        }
+        .movie-date {
+            font-size: 20px;
+            color: red;
+            margin-left: 10px;
+        }
+    }
+}
